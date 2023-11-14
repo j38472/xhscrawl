@@ -19,6 +19,7 @@ service/connections/
 service/unread/
 service/account_manual/
 service/usersearch/
+service/follow/
 
 
 !service/*.md
