@@ -24,3 +24,5 @@
 | v01.12 | 2023.10.10 | - 增加[小红书、b站推广服务](https://github.com/submato/xhscrawl#%E6%8F%90%E4%BE%9B%E5%B0%8F%E7%BA%A2%E4%B9%A6b%E7%AB%99%E6%8E%A8%E5%B9%BF%E6%9C%8D%E5%8A%A1) |
 | v01.13 | 2023.10.18 | - 增加app数据服务 |
 | v01.14 | 2023.10.19 | - 增加广告服务、调整changelog位置 |
+| v01.15 | 2023.11.07 | - 增加[用户搜索](https://github.com/submato/xhscrawl/blob/main/service/service_index/usersearch.md)                  |
+| v01.16 | 2023.11.13 | - 增加[关注用户](https://github.com/submato/xhscrawl/blob/main/service/service_index/follow.md)  |

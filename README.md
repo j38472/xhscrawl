@@ -87,6 +87,7 @@
 |[发送评论](https://github.com/submato/xhscrawl/blob/main/service/service_index/comment.md)                   |
 | [获取笔记详情](https://github.com/submato/xhscrawl/blob/main/service/service_index/note_detail.md)    |
 | [笔记搜索](https://github.com/submato/xhscrawl/blob/main/service/service_index/search.md)                  |
+| [用户搜索](https://github.com/submato/xhscrawl/blob/main/service/service_index/usersearch.md)                  |
 | [获取笔记评论](https://github.com/submato/xhscrawl/blob/main/service/service_index/get_comment.md)                  |
 | [收藏笔记](https://github.com/submato/xhscrawl/blob/main/service/service_index/collect_note.md)                |
 | [给笔记点赞](https://github.com/submato/xhscrawl/blob/main/service/service_index/like_note.md)  
