@@ -26,3 +26,6 @@
 | v01.14 | 2023.10.19 | - 增加广告服务、调整changelog位置 |
 | v01.15 | 2023.11.07 | - 增加[用户搜索](https://github.com/submato/xhscrawl/blob/main/service/service_index/usersearch.md)                  |
 | v01.16 | 2023.11.13 | - 增加[关注用户](https://github.com/submato/xhscrawl/blob/main/service/service_index/follow.md)  |
+| v01.17 | 2023.11.15 | - 增加[专业号-发送私信](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_sent_msg.md) |
+| v01.18 | 2023.11.15 | - 增加[专业号-私信列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_msg_list.md) |
+| v01.19 | 2023.11.15 | - 增加[专业号-与某用户历史聊天消息](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_history.md) |

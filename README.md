@@ -101,6 +101,9 @@
 | [消息-新增关注列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/connections.md)  |
 | [未读通知数](https://github.com/submato/xhscrawl/blob/main/service/service_index/unread.md)  |
 | [关注用户](https://github.com/submato/xhscrawl/blob/main/service/service_index/follow.md)  |
+| [专业号-发送私信](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_sent_msg.md)  |
+| [专业号-私信列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_msg_list.md)  |
+| [专业号-与某用户历史聊天消息](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_history.md)  |
 | 若没有你需要的接口,联系作者有偿开发，[提需前必看](https://github.com/submato/xhscrawl/blob/main/service/service_index/feature_notice.md)    |
 
 
@@ -109,7 +112,6 @@
 。能回答你90%的问题，节省自己、作者的宝贵时间。
 
 wx: <img width="400" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/d63ef610-527f-4d3c-af9b-9244b172faf5">
-
 
 ## Star History
 
