@@ -55,7 +55,7 @@
 
 ## how to run demo
 - python环境
-  - execjs包
+  - execjs包(可能编辑器会找不到这个包，真正名字叫PyExecJS)
   - 等其他import依赖
 - java环境
 - node js环境，需要支持ES13的 node js版本，也就是node js版本要晚于June 2022
