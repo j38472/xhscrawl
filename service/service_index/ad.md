@@ -62,8 +62,6 @@ star数量增长趋势
 
 
 
-访问量趋势图(更新时间：2023-11-13)
+访问量趋势图(更新时间：2023-11-16)
 
-<img width="363" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/c072750e-db20-487a-8b53-6eda152a3e78">
-
-
+<img width="531" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/14264252-0cbe-485c-b9fe-b8f01b52bb7d">
