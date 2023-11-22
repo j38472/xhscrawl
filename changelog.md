@@ -29,3 +29,4 @@
 | v01.17 | 2023.11.15 | - 增加[专业号-发送私信](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_sent_msg.md) |
 | v01.18 | 2023.11.15 | - 增加[专业号-私信列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_msg_list.md) |
 | v01.19 | 2023.11.15 | - 增加[专业号-与某用户历史聊天消息](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_history.md) |
+| v01.20 | 2023.11.22 | - 更新获取笔记评论接口，使其更友好|

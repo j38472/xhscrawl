@@ -4,7 +4,7 @@
 1. 包含两个接口
    1. 获取评论：https://edith.xiaohongshu.com/api/sns/web/v2/comment/sub/page
    2. 获取评论的子评论：https://edith.xiaohongshu.com/api/sns/web/v2/comment/page
-2. 获取笔记所有评论(会自动帮忙翻页)，包括子评论
+2. 获取笔记所有评论，包括子评论
 3. 包括发评论的用户名、id、点赞数等。
 
 ## 效果
@@ -34,7 +34,7 @@
 
 ## 如何获取 && 价格
 
-价格：800
+价格：1200
 
 
 
