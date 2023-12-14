@@ -11,7 +11,7 @@
 - [作者联系方式、寻求帮助、合作](#%E4%BD%9C%E8%80%85%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F--%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9--%E5%90%88%E4%BD%9C)
 - [Star History](#star-history)
 
-
+ 
 ![Static Badge](https://img.shields.io/badge/author-submato-gree)
 ![Static Badge](https://img.shields.io/badge/GitHub-blue?logo=GitHub&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/author-3.7%2F3.8-blue?logo=Python&label=python&labelColor=black)
