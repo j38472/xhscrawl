@@ -82,7 +82,7 @@
 - 保证能够跑起来，因为代码原因跑不起来直接退款，都是做技术的，不玩那些虚。
 - 量大有优惠，但这里不是菜市场，讨价还价的不用来
 
-| 名称    | 
+| 名称(里面有返回参数及价格)    | 
 | ------------------------------------ |
 |[发送评论](https://github.com/submato/xhscrawl/blob/main/service/service_index/comment.md)                   |
 | [获取笔记详情](https://github.com/submato/xhscrawl/blob/main/service/service_index/note_detail.md)    |
