@@ -11,7 +11,7 @@
 - [作者联系方式、寻求帮助、合作](#%E4%BD%9C%E8%80%85%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F--%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9--%E5%90%88%E4%BD%9C)
 - [Star History](#star-history)
 
-
+ 
 ![Static Badge](https://img.shields.io/badge/author-submato-gree)
 ![Static Badge](https://img.shields.io/badge/GitHub-blue?logo=GitHub&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/author-3.7%2F3.8-blue?logo=Python&label=python&labelColor=black)
@@ -79,10 +79,10 @@
 - **以下api均为web端api**
 - 代码以最简单朴素的方式编写。
 - 有详细的运行文档，接口文档，每一个参数都有说明。
-- 保证能够跑起来，因为代码原因跑不起来直接退款，都是做技术的，不玩那些虚。
+- 作者会帮助在本地跑起来，因为代码原因跑不起来直接退款，都是做技术的，不玩那些虚。
 - 量大有优惠，但这里不是菜市场，讨价还价的不用来
 
-| 名称    | 
+| 名称(里面有返回参数及价格)    | 
 | ------------------------------------ |
 |[发送评论](https://github.com/submato/xhscrawl/blob/main/service/service_index/comment.md)                   |
 | [获取笔记详情](https://github.com/submato/xhscrawl/blob/main/service/service_index/note_detail.md)    |
