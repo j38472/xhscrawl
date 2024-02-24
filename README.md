@@ -113,7 +113,9 @@
 联系作者前请务必查阅[常见Q&A](https://github.com/submato/xhscrawl/blob/main/service/service_index/feature_notice.md)
 。能回答你90%的问题，节省自己、作者的宝贵时间。
 
-wx: <img width="400" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/d63ef610-527f-4d3c-af9b-9244b172faf5">
+由于出售的是源码，无法在线测试。介意勿扰
+
+wx: <img width="200" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/d63ef610-527f-4d3c-af9b-9244b172faf5">
 
 ## Star History
 
