@@ -24,6 +24,7 @@ service/pro_chat_sent_msg/
 service/pro_msg_list/
 service/pro_chat_history/
 service/creator_note_list/
+service/login_qrcode/
 
 
 !service/*.md

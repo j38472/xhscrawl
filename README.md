@@ -105,6 +105,7 @@
 | [专业号-私信列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_msg_list.md)  |
 | [专业号-与某用户历史聊天消息](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_history.md)  |
 | [创作中心-笔记列表](https://github.com/submato/xhscrawl/blob/main/service/service_index/creator_note_list.md)  |
+| [二维码登录获取cookie](https://github.com/submato/xhscrawl/blob/main/service/service_index/login_qrcode.md)  |
 | 若没有你需要的接口,联系作者有偿开发，[提需前必看](https://github.com/submato/xhscrawl/blob/main/service/service_index/feature_notice.md)    |
 
 
