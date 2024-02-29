@@ -31,4 +31,4 @@
 | v01.19 | 2023.11.15 | - 增加[专业号-与某用户历史聊天消息](https://github.com/submato/xhscrawl/blob/main/service/service_index/pro_chat_history.md) |
 | v01.20 | 2023.11.22 | - 更新获取笔记评论接口，使其更友好|
 | v01.23 | 2024.02.24 | - 增加[二维码登录获取cookie](https://github.com/submato/xhscrawl/blob/main/service/service_index/login_qrcode.md) 
-| v01.24 | 2024.02.29 | - 增加[创作中心-话题推荐接口](https://github.com/submato/xhscrawl/blob/main/service/service_index/topic_recommend.md) |
+| v01.24 | 2024.02.29 | - 增加[话题推荐接口](https://github.com/submato/xhscrawl/blob/main/service/service_index/topic_recommend.md) |
