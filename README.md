@@ -11,7 +11,6 @@
 - [作者联系方式、寻求帮助、合作](#%E4%BD%9C%E8%80%85%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F--%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9--%E5%90%88%E4%BD%9C)
 - [Star History](#star-history)
 
- 
 ![Static Badge](https://img.shields.io/badge/author-submato-gree)
 ![Static Badge](https://img.shields.io/badge/GitHub-blue?logo=GitHub&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/author-3.7%2F3.8-blue?logo=Python&label=python&labelColor=black)
@@ -22,8 +21,6 @@
 ## 感谢下列Sponsors对本仓库赞助
 
 ---
-
-
 
 *[成为赞助者，展示你的产品在这里](https://github.com/submato/xhscrawl/blob/main/service/service_index/ad.md)*
 
@@ -37,9 +34,7 @@
 
 ## 简介
 
-本项项目是针对web端
-
-小红书web的api都有加密，主要就是x-s。本项目是用python逆向小红书x-s。
+本项项目是针对web端。小红书web的api都有加密，主要就是x-s。本项目是用python逆向小红书x-s。
 
 ## 性能
 1. 本项目采用js计算，不使用playwright/selenium调用浏览器内核的方式。因为起浏览器太耗资源了，如果有高并发、多账号需求的生产环境很难容忍。
@@ -54,12 +49,14 @@
 
 
 ## how to run demo
+
+找到[demo/xhs.py](https://github.com/submato/xhscrawl/blob/main/demo/xhs.py) ,将自己需要的参数、cookie进行手动替换运行即可
+
 - python环境
   - execjs包(可能编辑器会找不到这个包，真正名字叫PyExecJS)
   - 等其他import依赖
 - java环境
 - node js环境，需要支持ES13的 node js版本，也就是node js版本要晚于June 2022
-- 找到demo/xhs.py，将自己需要的参数、cookie进行手动替换运行即可
 
 
 ## 常见Q&A
@@ -74,7 +71,7 @@
 [创建小红书账号指南](https://github.com/submato/xhscrawl/blob/main/service/service_index/account_manual.md)   
 
 
-### 提供逆向单个api的源码服务
+### 提供逆向单个api的源码
 
 - **以下api均为web端api**
 - 代码以最简单朴素的方式编写。
