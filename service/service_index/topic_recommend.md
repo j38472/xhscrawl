@@ -1,20 +1,47 @@
-# name
+# 话题推荐
 
-## 可以干什么
+通过关键词搜索对应话题
 
-## api
+在发布笔记时，将搜索出来的结果带上。可以实现发布笔记自动挑选话题。
 
 
 ## 数据Demo：
 
 ```json
-
+{
+    "success": true,
+    "msg": "成功",
+    "data": {
+        "result": {
+            "success": true
+        },
+        "topic_info_dtos": [
+            {
+                "smart": false,
+                "id": "54754634e77989532682b929",
+                "name": "帅哥",
+                "link": "https://www.xiaohongshu.com/page/topics/5a438d9e80008606617209b9?naviHidden=yes",
+                "view_num": 9918059975,
+                "type": "official"
+            },
+            {
+                "link": "https://www.xiaohongshu.com/page/topics/5e672abdda25eb00013952ca?naviHidden=yes",
+                "view_num": 54486530,
+                "type": "official",
+                "smart": false,
+                "id": "5e672abd000000000100a0c3",
+                "name": "帅哥壁纸"
+            }
+        ]
+    },
+    "code": 0
+}
 ```
 
 
 ## 如何获取 && 价格
 
-价格：
+价格：400
 
 
 ## 付费后你将获得
