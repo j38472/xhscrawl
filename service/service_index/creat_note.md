@@ -13,6 +13,9 @@
 
  
 ## 运行结果示例
+
+联系作者获取演示视频
+
 ```json
 {"msg":"","data":{"id":"6512fd9600033a","score":10},"share_link":"https://www.xiaohongshu.com/discovery/item/6512f001f03c33a","business_bind_results":[],"result":0,"success":true}
 
@@ -20,7 +23,7 @@
 
 ## 如何获取 && 价格
 
-价格：2k
+价格：2000
 
 
 
