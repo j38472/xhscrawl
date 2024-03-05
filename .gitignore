@@ -1,6 +1,5 @@
 service/*.py
 service/*.js
-service/note_detail_nowatermark/
 service/getcomment/
 service/comment/
 service/creat_note/
@@ -28,7 +27,5 @@ service/creator_note_list/
 service/login_qrcode/
 service/topic_recommend/
 
-
-
-
 !service/*.md
+/service/note_detail_nowatermark/
