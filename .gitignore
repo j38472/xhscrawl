@@ -20,6 +20,7 @@ service/unread/
 service/account_manual/
 service/usersearch/
 service/follow/
+service/follow_ex/
 service/pro_chat_sent_msg/
 service/pro_msg_list/
 service/pro_chat_history/
