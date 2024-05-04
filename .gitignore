@@ -27,6 +27,7 @@ service/pro_chat_history/
 service/creator_note_list/
 service/login_qrcode/
 service/topic_recommend/
+service/topic_notes/
 
 !service/*.md
 /service/note_detail_nowatermark/

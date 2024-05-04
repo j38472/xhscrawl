@@ -12,7 +12,6 @@
       <excludeFolder url="file://$MODULE_DIR$/service/login_qrcode" />
       <excludeFolder url="file://$MODULE_DIR$/service/mentions" />
       <excludeFolder url="file://$MODULE_DIR$/service/pro_chat_history" />
-      <excludeFolder url="file://$MODULE_DIR$/service/pro_chat_sent_msg" />
       <excludeFolder url="file://$MODULE_DIR$/service/pro_msg_list" />
       <excludeFolder url="file://$MODULE_DIR$/service/search" />
       <excludeFolder url="file://$MODULE_DIR$/service/search_keyword_recommend" />
@@ -23,6 +22,7 @@
       <excludeFolder url="file://$MODULE_DIR$/service/usersearch" />
       <excludeFolder url="file://$MODULE_DIR$/service/note_detail_nowatermark" />
       <excludeFolder url="file://$MODULE_DIR$/service/follow_ex" />
+      <excludeFolder url="file://$MODULE_DIR$/service/pro_chat_sent_msg" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
