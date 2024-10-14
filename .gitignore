@@ -28,6 +28,7 @@ service/creator_note_list/
 service/login_qrcode/
 service/topic_recommend/
 service/topic_notes/
+service/user_me/
 
 !service/*.md
 /service/note_detail_nowatermark/

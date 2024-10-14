@@ -34,3 +34,4 @@
 | v01.24 | 2024.02.29 | - 增加[话题推荐接口](https://github.com/submato/xhscrawl/blob/main/service/service_index/topic_recommend.md) |
 | v01.25 | 2024.03.03 | - 升级扫码登录获取cookie |
 | v01.26 | 2024.03.05 | - 升级获取笔记详情，可以获取无水印图片 |
+| v01.27 | 2024.10.13 | - 增加[本账号用户信息](https://github.com/submato/xhscrawl/blob/main/service/service_index/user_me.md) |
