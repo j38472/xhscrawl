@@ -124,7 +124,8 @@
 由于出售的是源码，无法在线测试。介意勿扰
 
 微信留言您的需求，备注：小红书API
-<img width="719" alt="image" src="https://github.com/user-attachments/assets/68ce8fb6-7557-4507-9f9b-a7c8bb157b10" />
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/68ce8fb6-7557-4507-9f9b-a7c8bb157b10" />
 
 ## Star History
 
