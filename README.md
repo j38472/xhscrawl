@@ -124,7 +124,9 @@
 
 由于出售的是源码，无法在线测试。介意勿扰
 
-wx: <img width="200" alt="image" src="https://github.com/submato/xhscrawl/assets/55040284/d63ef610-527f-4d3c-af9b-9244b172faf5">
+微信留言您的需求，备注：小红书API
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/68ce8fb6-7557-4507-9f9b-a7c8bb157b10" />
 
 ## Star History
 
