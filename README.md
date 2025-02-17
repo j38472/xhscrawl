@@ -1,4 +1,8 @@
-# 小红书最新加密算法已逆向完成，下列所有接口都可用，在线获取XS api预计 2025.2.20上线
+# 在线获取XS api预计已经上线
+
+地址: apiserver.top
+接口文档地址: https://apiserver.gitbook.io/apiserverdocs 或 https://github.com/submato/xhscrawl/blob/main/apiserver.md
+
 
 # 对熟悉爬虫想做副业的可以联系作者，作者有大量的爬虫副业
 
