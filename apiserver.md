@@ -14,7 +14,7 @@
 ## QPS相关
 
 1. 各平台都有频率检测。为不触发风控，保护你的帐号，建议小红书相关接口每次接口调用都sleep 0.5-1秒。
-2. 服务处于启动期，限制每个用户最高QPS为1。请不要暴力请求接口，会导致接口响应严重裂化。 若您有需求，请联系作者，作者将为您扩充资源。
+2. 若对QPS有需求，请联系作者，作者将为您扩充资源。
 
 ## 价格
 
@@ -100,38 +100,59 @@
 #### python代码实例
 
 ```python
-#以下为笔记搜索接口示范
-    
-   #小红书账号cookie a1字段
-  	a1 = '194fa029a780aceej3dvs06kum1qwb6r09b0g5ghp30000317563'
-		#请求小红书的参数
+#以下为笔记详情接口示范
+ 
+if __name__ == '__main__':
+    #小红书帐号cookie
+    cookie = "xxxxxx"
+    # 小红书账号cookie a1字段
+    a1 = '194fa029a780aceXXXXXXXXXXXXXXXXXXXXXXXp30000317563'
+    # 请求小红书的参数
     Param = {
-        "keyword": "杨梅",  # keyword：需要搜索的内容
-        "page": 1,  # 第几页
-        "page_size": 20,  # 一页的大小
-        "image_formats": ["jpg", "webp", "avif"],
-        "search_id": "2dipse6gc401o30jnqvv9",  # 随便一个search_id就行，不需要改
-        "sort": "general",  # 排序，general：默认, popularity_descending：最热, time_descending：最新
-        "note_type": 0  # 类型 0-全部 1-视频 2-图文
+        "note_id": "XXXXXX",
+        "xsec_token": "XXXXXX"
     }
-    #请求小红书的api
-    api = '/api/sns/web/v2/login/code'
+    # 请求小红书的api
+    api = '/api/sns/web/v1/feed'
     data = {
         "a1": a1,
         "params": Param,
-        "method": "post", #小红书该api方式为post
+        "method": "post",  # 小红书该api方式为post
         "api": api,
     }
     host = "http://apiserver.top"
     token = "XXXXXXXXXX"  # apiserver.top 平台的token 填这里
 
     headers = {
-        "Authorization": f"Token {token}", # 填入token
+        "Authorization": f"Token {token}",  # 填入token
         "Content-Type": "application/json",  # 确保请求头中包含 Content-Type
     }
 
+    response = requests.post(f"{host}/api/xhs/xs/", headers=headers, json=data, )
+    xs_xt = response.json().get('data')
+    xhsHeader = headers = {
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "cache-control": "no-cache",
+        "content-type": "application/json;charset=UTF-8",
+        "origin": "https://www.xiaohongshu.com",
+        "pragma": "no-cache",
+        "referer": "https://www.xiaohongshu.com/",
+        "sec-ch-ua": "\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+        }
+    headers['cookie'] = cookie
+    headers['X-s'] = xs_xt['X-s']
+    headers['X-t'] = str(xs_xt['X-t'])
 
-    response = requests.post(f"{host}/api/xhs/xs/", headers=headers,json=data, )
-    print(response.json())
+
+    response = requests.post(url='https://edith.xiaohongshu.com/api/sns/web/v1/feed', data=data,headers=headers)
+
+    print(response)
 ```
 
