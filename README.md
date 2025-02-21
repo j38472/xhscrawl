@@ -80,7 +80,16 @@
 
 ### 在线获取xs
 
-提供在线接口获取xs(按次计费价格在0.01元/次左右，预计2.20日上线)
+提供在线接口获取xs
+
+
+地址: apiserver.top
+
+接口文档地址: https://apiserver.gitbook.io/apiserverdocs 
+
+或 https://github.com/submato/xhscrawl/blob/main/apiserver.md
+
+后续会增加各平台的逆向
 
 ### 创建小红书账号指南
 
