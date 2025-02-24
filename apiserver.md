@@ -1,6 +1,6 @@
 ## 简介
 
-官网：apiserver.top
+官网：http://apiserver.top/
 
 提供各平台各字段逆向的在线接口，按照请求次数收费。
 
