@@ -4,9 +4,10 @@
 
 地址:http://apiserver.top/
 
-接口文档地址: https://apiserver.gitbook.io/apiserverdocs 
+接口文档地址: https://github.com/submato/xhscrawl/blob/main/apiserver.md 
 
-或 https://github.com/submato/xhscrawl/blob/main/apiserver.md
+或 https://apiserver.gitbook.io/apiserverdocs 
+
 
 ## Table of content
 
