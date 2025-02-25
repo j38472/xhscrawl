@@ -55,7 +55,7 @@
 
 ```json
 {
-  //  token用于标识帐号，从官网'我的'中获取。
+  //  Authorization用于标识帐号，从官网'我的'中获取。
   "Authorization": "Token cc87ae3f488357cabd786689c4d9d1675ae85b26",
   "Content-Type": "application/json"  //使用json交互
  
@@ -119,10 +119,10 @@ if __name__ == '__main__':
         "api": api,
     }
     host = "http://apiserver.top"
-    token = "xxx"  # apiserver.top 平台的token 填这里
+    Authorization = "xxx"  # apiserver.top 平台的Authorization 填这里
 
     headers = {
-        "Authorization": f"Token {token}",  # 填入token
+        "Authorization": f"Token {Authorization}",  # 填入Authorization
         "Content-Type": "application/json",  # 确保请求头中包含 Content-Type
     }
 
