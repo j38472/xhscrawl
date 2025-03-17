@@ -33,3 +33,5 @@ service/pro-card/
 
 !service/*.md
 /service/note_detail_nowatermark/
+
+dataservice

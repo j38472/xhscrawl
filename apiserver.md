@@ -1,28 +1,37 @@
-## 简介
+# 简介
 
 官网：http://apiserver.top/
 
 提供各平台各字段逆向的在线接口，按照请求次数收费。
 
-## 接口概览
+# 接口概览
 
-| 接口                     | 对应平台及关键字段 | 每次调用消耗token数 | 单词请求价格 |响应数据 | 接口超时时间 | 最高QPS |
-| ------------------------ | ------------------ | ------------------- |  -------- |-------- | ------------ | ------- |
-| /api/xhs/xs/             | 小红书 xs、xt      | 10 token/次 |0.005-0.01元 | 50ms    | 800ms        | 200       |
-| 更多平台加密字段敬请期待 | /                  | /                   | /        | /            | /       |
+| 接口                     | 对应平台及关键字段 | 每次调用消耗token数  |响应数据 | 接口超时时间 | 最高QPS |
+| ------------------------ | ------------------ |   -------- |-------- | ------------ | ------- |
+| /api/xhs/xs/             | 小红书 xs、xt      | 10 token/次  | 50ms    | 800ms        | 200       |
+| /api/xhs/notedetail | 笔记详情                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/getcomment | 笔记评论                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/getsubcomments | 笔记子评论                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userinfo | 用户详情                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userposted | 用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/tagnotes | 话题笔记列表                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 
-## QPS相关
+
+
+
+# QPS相关
 
 若对qps有要求请联系作者，作者将为单独您扩充资源。
 
-## 价格
+# 价格
 
-### token消耗优先级
+## token消耗优先级
 
 1. 订阅计划 > 单独购买的token。
 2. 订阅计划内：到期时间越早，越优先消耗。
 
-### token数充值价格表
+## token数充值价格表
 
 感谢大家对apiserver支持，为便于理解，于2月25日降价，并统一价格：xs包月单次请求0.005元。xs非包月单次请求0.01元。之前购买的用户差价已补齐至账户
 
@@ -32,7 +41,7 @@
 | ------------ | --------------------- | -------- |
 | 1¥/千token    | xs接口：0.01元/次  | 1元      |
 
-### 订阅计划表
+## 订阅计划表
 
 若超出有效期，未使用完的token数将过期作废。
 
@@ -43,16 +52,14 @@
 | 1个月大量计划 | 2000元  | 400w    | xs-xt接口：0.005元/次   | 
 
 
-## 接口文档
+# 接口文档
 
-### /api/xhs/xs/
+## HOST
 
-#### 请求url
+http://apiserver.top
 
-**POST apiserver.top/api/xhs/xs/**
-
-#### 请求头
-
+## 请求头(header)
+所有接口都一样
 ```json
 {
   //  Authorization用于标识帐号，从官网'我的'中获取。
@@ -62,7 +69,11 @@
 }
 ```
 
-#### 请求体(json格式)
+## /api/xhs/xs/
+
+method POST
+
+### 请求体(json格式)
 
 ```json
 {
@@ -77,7 +88,7 @@
 }
 ```
 
-#### 响应参数
+### 响应参数
 
 ```json
 {
@@ -93,7 +104,7 @@
 
 ```
 
-#### python代码实例
+### python代码实例
 
 ```python
 # 以下为笔记详情接口示范
@@ -150,3 +161,91 @@ if __name__ == '__main__':
     print(response.json())
 ```
 
+## GET /api/xhs/notedetail App端笔记详情接口 
+
+token消耗：30
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   noteId  | string |   笔记id    | 必须|
+
+## GET /api/xhs/getcomment  App端笔记评论接口
+
+token消耗：30
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   noteId  | string |   笔记id    | 必须|
+|   start  | string |      翻页，上一次请求最后一条评论的id。不传默认请求第一页。 | 非必需|
+
+## GET /api/xhs/getsubcomments  App端笔记子评论接口
+
+token消耗：30
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   noteId  | string |   笔记id    | 必须|
+|   commentId  | string |   一级评论id（要请求哪条评论的子评论）    | 必须|
+
+|   start  | string |      翻页，上一次请求最后一条评论的id。不传默认请求第一页。 | 非必需|
+
+## GET /api/xhs/appsearch App端笔记搜索接口
+
+token消耗：60
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+| keyword    | string  |     要搜索的关键字  |  必须|
+| page    | integer  |     第几页  |  必须|
+| searchId    | string  |   第一次请求可不传，服务端会生成searchId。 翻页时建议携带服务端返回的searchId。多个关键字不要复用searchId。    |  非必须|
+| sessionId    | string  |    第一次请求可不传，服务端会生成sessionId。 翻页时建议携带服务端返回的sessionId。   |  非必须|
+| sortType    | string  |    笔记排序规则 默认值：general 可选值：综合：general、最新：time_descending、最多点赞：popularity_descending、最多评论：comment_descending、最多收藏：collect_descending   |  非必须|
+| filterNoteType    | string  |   筛选笔记类型 默认值：不限 可选值：视频笔记、普通笔记    |  非必须|
+| filterNoteTime    | string  |    筛选笔记发布时间 默认值：不限 可选值：一天内、一周内、半年内   |  非必须|
+| filterNoteRange    | string  |   筛选笔记搜索范围 默认值：不限 可选值：已看过、未看过、已关注    |  非必须|
+
+
+## GET /api/xhs/userinfo Web用户详情接口
+
+token消耗：100
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|  userId   | string |   用户id    | 必须 |
+
+## GET /api/xhs/userposted  Web用户笔记列表
+
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   userId  | string |    用户id   | 必须 |
+|   cursor  | string |    翻页，上一次请求到的最后一条作品id。 不传默认请求第一页。   | 非必须 |
+
+## GET /api/xhs/tagnotes App话题标签笔记列表
+
+token消耗：30
+
+param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   pageId  | string |   标签id    | 必须 |
+|   first_load_time  | string |   首次请求的时间，毫秒级时间戳    | 必须 |
+|   sort  | string |   排序 默认值：hot（综合） 可选值：hot（综合）、time（最新）、trend（最热）    | 非必须 |
+|   session_id  | string |   首次不要传，由服务端生成。 翻页传。    | 非必须 |
+|   last_note_ct  | string |   首次不传。翻页传上一次请求返回的最后一条笔记create_time字段    | 非必须 |
+|   last_note_id  | string |   首次不传。翻页传上一次请求返回的最后一条笔记id    | 非必须 |
+|   cursor_score  | string |   首次不传。翻页传上一次请求返回的最后一条笔记cursor_score字段    | 非必须 |
+ 
