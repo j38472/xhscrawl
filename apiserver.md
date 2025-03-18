@@ -8,13 +8,13 @@
 | 接口                     | 对应平台及关键字段 | 每次调用消耗token数  |响应数据 | 接口超时时间 | 最高QPS |
 | ------------------------ | ------------------ |   -------- |-------- | ------------ | ------- |
 | /api/xhs/xs/             | 小红书 xs、xt      | 10 token/次  | 50ms    | 800ms        | 200       |
-| /api/xhs/notedetail | 笔记详情                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/getcomment | 笔记评论                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/getsubcomments | 笔记子评论                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/notedetail | 笔记详情                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/getcomment | 笔记评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/getsubcomments | 笔记子评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/userinfo | 用户详情                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/userposted | 用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/tagnotes | 话题笔记列表                  | 30 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/tagnotes | 话题笔记列表                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 
 
 
@@ -160,7 +160,7 @@ if __name__ == '__main__':
 
 ## GET /api/xhs/notedetail App端笔记详情接口 
 
-token消耗：30
+token消耗：20
 
 param:
 
@@ -170,7 +170,7 @@ param:
 
 ## GET /api/xhs/getcomment  App端笔记评论接口
 
-token消耗：30
+token消耗：20
 
 param:
 
@@ -181,7 +181,7 @@ param:
 
 ## GET /api/xhs/getsubcomments  App端笔记子评论接口
 
-token消耗：30
+token消耗：20
 
 param:
 
@@ -232,7 +232,7 @@ param:
 
 ## GET /api/xhs/tagnotes App话题标签笔记列表
 
-token消耗：30
+token消耗：20
 
 param:
 
