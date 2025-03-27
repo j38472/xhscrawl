@@ -30,7 +30,7 @@ service/topic_recommend/
 service/topic_notes/
 service/user_me/
 service/pro-card/
-
+service/like_comment/
 !service/*.md
 /service/note_detail_nowatermark/
 
