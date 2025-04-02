@@ -66,7 +66,7 @@ http://apiserver.top
 }
 ```
 
-## /api/xhs/xs/
+## /api/xhs/xs
 
 method POST
 
