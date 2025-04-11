@@ -33,5 +33,7 @@ service/pro-card/
 service/like_comment/
 !service/*.md
 /service/note_detail_nowatermark/
+service/new_pro_chat/
+service/pro-card-list/
 
 dataservice
