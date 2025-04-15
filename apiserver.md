@@ -12,8 +12,10 @@
 | /api/xhs/getcomment | 笔记评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/getsubcomments | 笔记子评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/userinfo | 用户详情                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userinfo | web用户详情                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/appuserinfo | (新)APP用户详情                  | 50 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/userposted | 用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/appuserposted | (新)app用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/tagnotes | 话题笔记列表                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 
 
@@ -51,11 +53,11 @@
 
 # 接口文档
 
-## HOST
+## 公共HOST
 
 http://apiserver.top
 
-## 请求头(header)
+## 公共请求头(header)
 所有接口都一样
 ```json
 {
@@ -66,9 +68,9 @@ http://apiserver.top
 }
 ```
 
-## /api/xhs/xs
 
-method POST
+## 1. POST /api/xhs/xs
+
 
 ### 请求体(json格式)
 
@@ -158,32 +160,32 @@ if __name__ == '__main__':
     print(response.json())
 ```
 
-## GET /api/xhs/notedetail App端笔记详情接口 
+## 2. GET /api/xhs/notedetail App端笔记详情接口 
 
-token消耗：20
+> token消耗：20
 
-param:
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
 |   noteId  | string |   笔记id    | 必须|
 
-## GET /api/xhs/getcomment  App端笔记评论接口
+## 3. GET /api/xhs/getcomment  App端笔记评论接口
 
-token消耗：20
+> token消耗：20
 
-param:
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
 |   noteId  | string |   笔记id    | 必须|
 |   start  | string |      翻页，上一次请求最后一条评论的id。不传默认请求第一页。 | 非必需|
 
-## GET /api/xhs/getsubcomments  App端笔记子评论接口
+## 4. GET /api/xhs/getsubcomments  App端笔记子评论接口
 
-token消耗：20
+> token消耗：20
 
-param:
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
@@ -192,11 +194,11 @@ param:
 
 |   start  | string |      翻页，上一次请求最后一条评论的id。不传默认请求第一页。 | 非必需|
 
-## GET /api/xhs/appsearch App端笔记搜索接口
+## 5. GET /api/xhs/appsearch App端笔记搜索接口
 
-token消耗：60
+> token消耗：60
 
-param:
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
@@ -210,31 +212,67 @@ param:
 | filterNoteRange    | string  |   筛选笔记搜索范围 默认值：不限 可选值：已看过、未看过、已关注    |  非必须|
 
 
-## GET /api/xhs/userinfo Web用户详情接口
+## 6. GET /api/xhs/userinfo Web用户详情接口
 
-token消耗：100
+> token消耗：100
 
-param:
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
 |  userId   | string |   用户id    | 必须 |
 
-## GET /api/xhs/userposted  Web用户笔记列表
+## 7. GET /api/xhs/appuserinfo app用户详情接口
 
+> token消耗：50
 
-param:
+> param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|  userId   | string |   用户id    | 必须 |
+
+比web信息更全，速度更快，价格更便宜
+
+## 8. GET /api/xhs/userposted  Web用户笔记列表
+> token消耗：40
+
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
 |   userId  | string |    用户id   | 必须 |
 |   cursor  | string |    翻页，上一次请求到的最后一条作品id。 不传默认请求第一页。   | 非必须 |
 
-## GET /api/xhs/tagnotes App话题标签笔记列表
+## 9. GET /api/xhs/appuserposted  APP用户笔记列表
+> token消耗：40
 
-token消耗：20
+> param:
 
-param:
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   userId  | string |    用户id   | 必须 |
+|   cursor  | string |    翻页，上一次请求到的最后一条作品id。 不传默认请求第一页。   | 非必须 |
+
+> 返回
+
+第一页返回4~6条，翻页每页返回20条
+
+## 10. GET /api/xhs/userposted  Web用户笔记列表
+> token消耗：40
+> param
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+|   userId  | string |    用户id   | 必须 |
+|   cursor  | string |    翻页，上一次请求到的最后一条作品id。 不传默认请求第一页。   | 非必须 |
+
+
+## 11. GET /api/xhs/tagnotes App话题标签笔记列表
+
+> token消耗：20
+
+> param:
 
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
