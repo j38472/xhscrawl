@@ -12,7 +12,7 @@
 | /api/xhs/getcomment | 笔记评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/getsubcomments | 笔记子评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/userinfo | web用户详情                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userinfo | web用户详情                 | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/appuserinfo | (新)APP用户详情                  | 50 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/userposted | 用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/appuserposted | (新)app用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
@@ -213,7 +213,7 @@ if __name__ == '__main__':
 
 
 ## 6. GET /api/xhs/userinfo Web用户详情接口
-
+建议使用app版本，后续将逐步淘汰
 > token消耗：100
 
 > param:
@@ -235,6 +235,8 @@ if __name__ == '__main__':
 比web信息更全，速度更快，价格更便宜
 
 ## 8. GET /api/xhs/userposted  Web用户笔记列表
+建议使用app版本，后续将逐步淘汰
+
 > token消耗：40
 
 > param:
