@@ -136,7 +136,7 @@ if __name__ == '__main__':
         "Content-Type": "application/json",  # 确保请求头中包含 Content-Type
     }
 
-    response = requests.post(f"{host}/api/xhs/xs/", headers=headers, json=data, )
+    response = requests.post(f"{host}/api/xhs/xs", headers=headers, json=data, )
     xs_xt = response.json().get('data')
     print(xs_xt)
 
