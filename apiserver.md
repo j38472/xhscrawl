@@ -191,7 +191,6 @@ if __name__ == '__main__':
 | ------------ | ------|--------------------- | -------- |
 |   noteId  | string |   笔记id    | 必须|
 |   commentId  | string |   一级评论id（要请求哪条评论的子评论）    | 必须|
-
 |   start  | string |      翻页，上一次请求最后一条评论的id。不传默认请求第一页。 | 非必需|
 
 ## 5. GET /api/xhs/appsearch App端笔记搜索接口
