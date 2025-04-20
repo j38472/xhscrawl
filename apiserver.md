@@ -297,7 +297,6 @@ if __name__ == '__main__':
 | keyword    | string  |     要搜索的关键字  |  必须|
 | page    | integer  |     第几页，从1开始  |  必须|
 | searchId    | string  |   第一次请求可不传，服务端会生成searchId。 翻页时建议携带服务端返回的searchId。多个关键字不要复用searchId。    |  非必须|
-
 | sort    | string  |    笔记排序规则 默认值：general 可选值：综合：general、最新：time_descending、最多点赞：popularity_descending、最多评论：comment_descending、最多收藏：collect_descending   |  非必须|
 | noteType    | integer  |   筛选笔记类型 默认值：0 可选值：0全部、1视频、2图文    |  非必须|
 
