@@ -11,15 +11,14 @@
 | /api/xhs/notedetail | 笔记详情                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/getcomment | 笔记评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/getsubcomments | 笔记子评论                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/userinfo | web用户详情                 | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/appuserinfo | (新)APP用户详情                  | 50 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/userposted | 用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/appsearch | app笔记搜索                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     |
+| /api/xhs/appuserinfo | (新)APP用户详情                  | 50 token/次                 | 秒级 | 无       |      量大请提前联系作者     |
 | /api/xhs/appuserposted | (新)app用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/tagnotes | 话题笔记列表                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-
-
-
+| 以下接口不建议使用 | 以下接口不建议使用                 | /                 | / | /       |      /     | 
+| /api/xhs/userposted | web用户笔记列表(将于4-25下线，请尽快迁移至app)                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userinfo | web用户详情(将于4-25下线，请尽快迁移至app)                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/websearch | web搜索(不确保稳定性，请迁移至app)                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 
 # QPS相关
 
@@ -202,7 +201,7 @@ if __name__ == '__main__':
 | 参数         | 类型	| 含义         | 是否必须 |
 | ------------ | ------|--------------------- | -------- |
 | keyword    | string  |     要搜索的关键字  |  必须|
-| page    | integer  |     第几页  |  必须|
+| page    | integer  |     第几页，从0开始  |  必须|
 | searchId    | string  |   第一次请求可不传，服务端会生成searchId。 翻页时建议携带服务端返回的searchId。多个关键字不要复用searchId。    |  非必须|
 | sessionId    | string  |    第一次请求可不传，服务端会生成sessionId。 翻页时建议携带服务端返回的sessionId。   |  非必须|
 | sortType    | string  |    笔记排序规则 默认值：general 可选值：综合：general、最新：time_descending、最多点赞：popularity_descending、最多评论：comment_descending、最多收藏：collect_descending   |  非必须|
@@ -285,3 +284,21 @@ if __name__ == '__main__':
 |   last_note_id  | string |   首次不传。翻页传上一次请求返回的最后一条笔记id    | 非必须 |
 |   cursor_score  | string |   首次不传。翻页传上一次请求返回的最后一条笔记cursor_score字段    | 非必须 |
  
+## 12. GET /api/xhs/websearch Web端笔记搜索接口
+
+不确保稳定性，搜索内容，信息均不如app端接口。建议迁移至app端
+
+> token消耗：60
+
+> param:
+
+| 参数         | 类型	| 含义         | 是否必须 |
+| ------------ | ------|--------------------- | -------- |
+| keyword    | string  |     要搜索的关键字  |  必须|
+| page    | integer  |     第几页，从1开始  |  必须|
+| searchId    | string  |   第一次请求可不传，服务端会生成searchId。 翻页时建议携带服务端返回的searchId。多个关键字不要复用searchId。    |  非必须|
+
+| sort    | string  |    笔记排序规则 默认值：general 可选值：综合：general、最新：time_descending、最多点赞：popularity_descending、最多评论：comment_descending、最多收藏：collect_descending   |  非必须|
+| noteType    | integer  |   筛选笔记类型 默认值：0 可选值：0全部、1视频、2图文    |  非必须|
+
+
