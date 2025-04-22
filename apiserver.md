@@ -16,9 +16,9 @@
 | /api/xhs/appuserposted | (新)app用户发布笔记列表                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | /api/xhs/tagnotes | 话题笔记列表                  | 20 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 | 以下接口不建议使用 | 以下接口不建议使用                 | /                 | / | /       |      /     | 
-| /api/xhs/userposted | web用户笔记列表(将于4-25下线，请尽快迁移至app)                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/userinfo | web用户详情(将于4-25下线，请尽快迁移至app)                  | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
-| /api/xhs/websearch | web搜索(不确保稳定性，请迁移至app)                  | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userposted | web用户笔记列表 (建议使用app接口)                  | 40 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/userinfo | web用户详情 (建议使用app接口)                     | 100 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
+| /api/xhs/websearch | web搜索(建议使用app接口)                     | 60 token/次                 | 秒级 | 无       |      量大请提前联系作者     | 
 
 # QPS相关
 
