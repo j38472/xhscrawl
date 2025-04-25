@@ -68,96 +68,6 @@ http://apiserver.top
 ```
 
 
-## 1. POST /api/xhs/xs
-
-
-### 请求体(json格式)
-
-```json
-{
-  "a1": "194fa029a780aceej3dvs06kum1qwb6r09b0g5ghp30000317563",
-  // 小红书帐号cookie中的a1字段
-  "params": {},
-  // 请求小红书的接口的参数
-  "method": "post",
-  // 请求小红书接口的方法
-  "api": "/api/sns/web/v2/login/code"
-  // 请求小红书接口名
-}
-```
-
-### 响应参数
-
-```json
-{
-  'code': 0,
-
-  'msg': '',
-
-  'data': {
-    'X-s': 'XXX',
-    'X-t': 00000
-  }
-}
-
-```
-
-### python代码实例
-
-```python
-# 以下为笔记详情接口示范
-
-if __name__ == '__main__':
-    # 小红书帐号cookie
-    cookie = "xxx"
-    # 小红书账号cookie a1字段
-    a1 = 'xxx'
-    # 请求小红书的参数
-    param = {
-        "source_note_id": "679469900000000018018d98",
-        "image_formats": ["jpg", "webp", "avif"],
-        "extra": {"need_body_topic": "1"},
-        "xsec_token": "ABREBBrQgn7R-7Q0SFGFY0AdTauA-_aziwDDC3DvJxLrs="
-    }
-    # 请求小红书的api
-    api = '/api/sns/web/v1/feed'
-    data = {
-        "a1": a1,
-        "params": param,
-        "method": "post",  # 小红书该api方式为post
-        "api": api,
-    }
-    host = "http://apiserver.top"
-    Authorization = "xxx"  # apiserver.top 平台的Authorization 填这里
-
-    headers = {
-        "Authorization": f"Token {Authorization}",  # 填入Authorization
-        "Content-Type": "application/json",  # 确保请求头中包含 Content-Type
-    }
-
-    response = requests.post(f"{host}/api/xhs/xs", headers=headers, json=data, )
-    xs_xt = response.json().get('data')
-    print(xs_xt)
-
-    xhsHeader = {"accept": "application/json, text/plain, */*", "accept-language": "zh-CN,zh;q=0.9",
-                 "cache-control": "no-cache", "content-type": "application/json;charset=UTF-8",
-                 "origin": "https://www.xiaohongshu.com", "pragma": "no-cache",
-                 "referer": "https://www.xiaohongshu.com/",
-                 "sec-ch-ua": "\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
-                 "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
-                 "sec-fetch-mode": "cors", "sec-fetch-site": "same-site",
-                 "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
-                 'cookie': cookie,
-                 }
-    xhsHeader["X-s"] = xs_xt["X-s"]
-    xhsHeader["X-t"] = str(xs_xt["X-t"])
-
-    response = requests.post(url='https://edith.xiaohongshu.com/api/sns/web/v1/feed',
-                             data=json.dumps(param, separators=(",", ":"), ensure_ascii=False).encode("utf-8"),
-                             headers=xhsHeader)
-
-    print(response.json())
-```
 
 ## 2. GET /api/xhs/notedetail App端笔记详情接口 
 
@@ -301,3 +211,97 @@ if __name__ == '__main__':
 | noteType    | integer  |   筛选笔记类型 默认值：0 可选值：0全部、1视频、2图文    |  非必须|
 
 
+
+
+## 13. POST /api/xhs/xs
+
+
+### 请求体(json格式)
+
+```json
+{
+  "a1": "194fa029a780aceej3dvs06kum1qwb6r09b0g5ghp30000317563",
+  // 小红书帐号cookie中的a1字段
+  "params": {},
+  // 请求小红书的接口的参数
+  "method": "post",
+  // 请求小红书接口的方法
+  "api": "/api/sns/web/v2/login/code"
+  // 请求小红书接口名
+}
+```
+
+### 响应参数
+
+```json
+{
+  'code': 0,
+
+  'msg': '',
+
+  'data': {
+    'X-s': 'XXX',
+    'X-t': 00000
+  }
+}
+
+```
+
+### python代码实例
+
+以下示范仅为请求/api/xhs/xs接口
+
+```python
+# 以下为笔记详情接口示范
+
+if __name__ == '__main__':
+    # 小红书帐号cookie
+    cookie = "xxx"
+    # 小红书账号cookie a1字段
+    a1 = 'xxx'
+    # 请求小红书的参数
+    param = {
+        "source_note_id": "679469900000000018018d98",
+        "image_formats": ["jpg", "webp", "avif"],
+        "extra": {"need_body_topic": "1"},
+        "xsec_token": "ABREBBrQgn7R-7Q0SFGFY0AdTauA-_aziwDDC3DvJxLrs="
+    }
+    # 请求小红书的api
+    api = '/api/sns/web/v1/feed'
+    data = {
+        "a1": a1,
+        "params": param,
+        "method": "post",  # 小红书该api方式为post
+        "api": api,
+    }
+    host = "http://apiserver.top"
+    Authorization = "xxx"  # apiserver.top 平台的Authorization 填这里
+
+    headers = {
+        "Authorization": f"Token {Authorization}",  # 填入Authorization
+        "Content-Type": "application/json",  # 确保请求头中包含 Content-Type
+    }
+
+    response = requests.post(f"{host}/api/xhs/xs", headers=headers, json=data, )
+    xs_xt = response.json().get('data')
+    print(xs_xt)
+
+    xhsHeader = {"accept": "application/json, text/plain, */*", "accept-language": "zh-CN,zh;q=0.9",
+                 "cache-control": "no-cache", "content-type": "application/json;charset=UTF-8",
+                 "origin": "https://www.xiaohongshu.com", "pragma": "no-cache",
+                 "referer": "https://www.xiaohongshu.com/",
+                 "sec-ch-ua": "\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"",
+                 "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
+                 "sec-fetch-mode": "cors", "sec-fetch-site": "same-site",
+                 "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+                 'cookie': cookie,
+                 }
+    xhsHeader["X-s"] = xs_xt["X-s"]
+    xhsHeader["X-t"] = str(xs_xt["X-t"])
+
+    response = requests.post(url='https://edith.xiaohongshu.com/api/sns/web/v1/feed',
+                             data=json.dumps(param, separators=(",", ":"), ensure_ascii=False).encode("utf-8"),
+                             headers=xhsHeader)
+
+    print(response.json())
+```
