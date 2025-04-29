@@ -35,7 +35,7 @@
 在线获取xs、xt、xhs数据等
  
 
-接口文档地址: https://github.com/submato/xhscrawl/blob/main/apiserver.md
+接口文档地址: [在线api接口文档](https://github.com/submato/xhscrawl/blob/main/apiserver.md)
 
 后续会增加各平台的逆向
 
